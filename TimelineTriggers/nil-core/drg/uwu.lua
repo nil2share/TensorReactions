@@ -122,6 +122,65 @@ local tbl =
 			used = false,
 			uuid = "ef42b7b9-3bc0-ebfd-8996-d58d99220ff9",
 		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Toggles.Dragoon.FireDive(NilsReactionCore.params.off, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "DragonFireDive Off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 9,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 2,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = -9,
+			used = false,
+			uuid = "dde2aa08-12ea-2bd5-988a-c9d9c11afe7c",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Logic.Toggles.AOEOff(NilsReactionCore.params.isTimeline)\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 9,
+			name = "Turn off AOE",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 9,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 2,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = -9,
+			used = false,
+			uuid = "5ba8d187-1b6b-bc79-9bea-cf431ab640de",
+		},
 	},
 	[3] = 
 	{
@@ -223,6 +282,96 @@ local tbl =
 			timerStartOffset = -3,
 			used = false,
 			uuid = "d352dec3-7091-3b54-bd67-b59d7fa2e943",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Toggles.Dragoon.FireDive(NilsReactionCore.params.on, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 27,
+			name = "DragonFireDive On",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 27,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 6,
+			timerEndOffset = 2,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "22befcdb-f8a6-6975-8193-aa9fc53a8278",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Logic.Toggles.AOEOn(NilsReactionCore.params.isTimeline)\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 27,
+			name = "Turn on AOE",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 27,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 6,
+			timerEndOffset = 2,
+			timerOffset = 0,
+			timerStartOffset = -5,
+			used = false,
+			uuid = "a71d4a65-b958-fa52-8a32-365d61bc66cd",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Hotbar.Feint() == true then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 27,
+			name = "Feint",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 27,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 6,
+			timerEndOffset = 0,
+			timerOffset = -4,
+			timerStartOffset = -5,
+			used = false,
+			uuid = "99905c51-1fe3-c4ea-99f4-c791fbc91887",
 		},
 	},
 	[8] = 
@@ -395,6 +544,36 @@ local tbl =
 			timerStartOffset = -1,
 			used = false,
 			uuid = "9713fed5-9117-71e0-bbac-76053beb9bfb",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Toggles.Dragoon.FireDive(NilsReactionCore.params.off, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 34,
+			name = "DragonFireDive Off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 34,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 8,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = -9,
+			used = false,
+			uuid = "22feb385-514c-0f0b-99d9-4ca3047c4dff",
 		},
 	},
 	[10] = 
@@ -936,6 +1115,39 @@ local tbl =
 			uuid = "a20d86a5-7233-3b06-a07d-9cc6acf4c515",
 		},
 	},
+	[25] = 
+	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Toggles.Dragoon.FireDive(NilsReactionCore.params.on, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 122,
+			name = "DragonFireDive On",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 122,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 25,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = -9,
+			used = false,
+			uuid = "5552cc51-0249-061c-bccf-1b4742b49bee",
+		},
+	},
 	[27] = 
 	{
 		
@@ -997,6 +1209,36 @@ local tbl =
 			timerStartOffset = -1,
 			used = false,
 			uuid = "edb76e82-e2b6-518e-9bd2-8ce49fbe41b5",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Hotbar.Feint() == true then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 124,
+			name = "Feint",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 124,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 27,
+			timerEndOffset = 0,
+			timerOffset = -4,
+			timerStartOffset = -5,
+			used = false,
+			uuid = "32421861-5986-51b8-be4d-8addd5996a80",
 		},
 	},
 	[28] = 
