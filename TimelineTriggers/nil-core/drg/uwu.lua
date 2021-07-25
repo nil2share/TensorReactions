@@ -40,6 +40,35 @@ local tbl =
 			conditions = 
 			{
 			},
+			enabled = true,
+			execute = "if NilsReactionCore.Toggles.Dragoon.FireDive(NilsReactionCore.params.off, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "DragonFireDive Off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 9,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 2,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = -9,
+			used = false,
+			uuid = "dde2aa08-12ea-2bd5-988a-c9d9c11afe7c",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
 			enabled = false,
 			execute = "NilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.off, NilsReactionCore.params.off, NilsReactionCore.params.on, 2000)\nself.used = true",
 			executeType = 2,
@@ -131,36 +160,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "NilsReactionCore.Toggles.Dragoon.FireDive(NilsReactionCore.params.off, NilsReactionCore.params.isNotTimeline) then self.used = true end",
-			executeType = 2,
-			lastUse = 0,
-			loop = false,
-			luaNeedsWeaveWindow = false,
-			luaReturnsAction = false,
-			name = "DragonFireDive Off",
-			randomOffset = 0,
-			randomTimeout = 3,
-			throttleTime = 0,
-			time = 9,
-			timeRandomRange = false,
-			timeRange = true,
-			timelineIndex = 2,
-			timerEndOffset = 0,
-			timerOffset = 0,
-			timerStartOffset = -9,
-			used = false,
-			uuid = "dde2aa08-12ea-2bd5-988a-c9d9c11afe7c",
-		},
-		
-		{
-			actions = 
-			{
-			},
-			conditions = 
-			{
-			},
-			enabled = true,
-			execute = "NilsReactionCore.Logic.Toggles.AOEOff(NilsReactionCore.params.isTimeline)\nself.used = true",
+			execute = "if NilsReactionCore.Logic.Toggles.AOEOff(NilsReactionCore.params.isTimeline) then self.used = true end",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -193,6 +193,36 @@ local tbl =
 	},
 	[6] = 
 	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Hotbar.Feint() == true then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 27,
+			name = "Feint",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 27,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 6,
+			timerEndOffset = 0,
+			timerOffset = -4,
+			timerStartOffset = -5,
+			used = false,
+			uuid = "99905c51-1fe3-c4ea-99f4-c791fbc91887",
+		},
 		
 		{
 			actions = 
@@ -292,7 +322,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "NilsReactionCore.Toggles.Dragoon.FireDive(NilsReactionCore.params.on, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			execute = "if NilsReactionCore.Toggles.Dragoon.FireDive(NilsReactionCore.params.on, NilsReactionCore.params.isNotTimeline) then self.used = true end",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -307,7 +337,7 @@ local tbl =
 			timeRandomRange = false,
 			timeRange = true,
 			timelineIndex = 6,
-			timerEndOffset = 2,
+			timerEndOffset = 3,
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
@@ -337,41 +367,11 @@ local tbl =
 			timeRandomRange = false,
 			timeRange = true,
 			timelineIndex = 6,
-			timerEndOffset = 2,
+			timerEndOffset = 3,
 			timerOffset = 0,
-			timerStartOffset = -5,
+			timerStartOffset = 0,
 			used = false,
 			uuid = "a71d4a65-b958-fa52-8a32-365d61bc66cd",
-		},
-		
-		{
-			actions = 
-			{
-			},
-			conditions = 
-			{
-			},
-			enabled = true,
-			execute = "if NilsReactionCore.Hotbar.Feint() == true then self.used = true end",
-			executeType = 2,
-			lastUse = 0,
-			loop = false,
-			luaNeedsWeaveWindow = false,
-			luaReturnsAction = false,
-			mechanicTime = 27,
-			name = "Feint",
-			randomOffset = 0,
-			randomTimeout = 3,
-			throttleTime = 0,
-			time = 27,
-			timeRandomRange = false,
-			timeRange = true,
-			timelineIndex = 6,
-			timerEndOffset = 0,
-			timerOffset = -4,
-			timerStartOffset = -5,
-			used = false,
-			uuid = "99905c51-1fe3-c4ea-99f4-c791fbc91887",
 		},
 	},
 	[8] = 
@@ -554,7 +554,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "NilsReactionCore.Toggles.Dragoon.FireDive(NilsReactionCore.params.off, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			execute = "if NilsReactionCore.Toggles.Dragoon.FireDive(NilsReactionCore.params.off, NilsReactionCore.params.isNotTimeline) then self.used = true end",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -750,36 +750,6 @@ local tbl =
 	},
 	[11] = 
 	{
-		
-		{
-			actions = 
-			{
-			},
-			conditions = 
-			{
-			},
-			enabled = false,
-			execute = "local target = Player:GetTarget()\nif target ~= nil and table.valid(target) and target.attackable and target.hp.percent < 10 and target.contentid == 1644 then\n  NilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.isTimeline)\n -- NilsReactionCore.Logic.Toggles.JumpsOff(NilsReactionCore.params.isTimeline)\n  self.used = true\nend",
-			executeType = 2,
-			lastUse = 0,
-			loop = true,
-			luaNeedsWeaveWindow = false,
-			luaReturnsAction = false,
-			mechanicTime = 42,
-			name = "Off - Low Health",
-			randomOffset = 0,
-			randomTimeout = 3,
-			throttleTime = 0,
-			time = 42,
-			timeRandomRange = false,
-			timeRange = true,
-			timelineIndex = 11,
-			timerEndOffset = 120,
-			timerOffset = 0,
-			timerStartOffset = 0,
-			used = false,
-			uuid = "e48d2e0e-df46-a5f0-af0d-f31e6d729fb3",
-		},
 		
 		{
 			actions = 
@@ -1117,36 +1087,6 @@ local tbl =
 	},
 	[25] = 
 	{
-		
-		{
-			actions = 
-			{
-			},
-			conditions = 
-			{
-			},
-			enabled = true,
-			execute = "NilsReactionCore.Toggles.Dragoon.FireDive(NilsReactionCore.params.on, NilsReactionCore.params.isNotTimeline) then self.used = true end",
-			executeType = 2,
-			lastUse = 0,
-			loop = false,
-			luaNeedsWeaveWindow = false,
-			luaReturnsAction = false,
-			mechanicTime = 122,
-			name = "DragonFireDive On",
-			randomOffset = 0,
-			randomTimeout = 3,
-			throttleTime = 0,
-			time = 122,
-			timeRandomRange = false,
-			timeRange = true,
-			timelineIndex = 25,
-			timerEndOffset = 0,
-			timerOffset = 0,
-			timerStartOffset = -9,
-			used = false,
-			uuid = "5552cc51-0249-061c-bccf-1b4742b49bee",
-		},
 	},
 	[27] = 
 	{
@@ -1644,9 +1584,9 @@ local tbl =
 			timeRandomRange = false,
 			timeRange = true,
 			timelineIndex = 38,
-			timerEndOffset = 3,
+			timerEndOffset = 0,
 			timerOffset = 0,
-			timerStartOffset = -0.5,
+			timerStartOffset = -2,
 			used = false,
 			uuid = "6482d8cd-f170-1fb6-b303-eb792b28e3e5",
 		},
@@ -1676,7 +1616,7 @@ local tbl =
 			timelineIndex = 38,
 			timerEndOffset = 5,
 			timerOffset = 0,
-			timerStartOffset = 0.5,
+			timerStartOffset = -1,
 			used = false,
 			uuid = "554996b8-7a67-b173-b795-1d2e655b1851",
 		},
@@ -1775,6 +1715,36 @@ local tbl =
 			timerStartOffset = 0,
 			used = false,
 			uuid = "f9625a0d-495e-6a32-9d4d-f698aaf0f24d",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Toggles.Dragoon.FireDive(NilsReactionCore.params.on, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 328,
+			name = "DragonFireDive On",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 328,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 43,
+			timerEndOffset = 4,
+			timerOffset = 0,
+			timerStartOffset = 2,
+			used = false,
+			uuid = "0aa3be8a-3e83-6187-8b44-1b60b5d4c65b",
 		},
 	},
 	[44] = 
