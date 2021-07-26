@@ -131,7 +131,7 @@ local tbl =
 			{
 			},
 			enabled = false,
-			execute = "if NilsReactionCore.Helpers.Tanks.AmIMainTankByContentID(1644) == false then NilsReactionCore.Actions.Role.Tank.Rampart() end\nself.used = true",
+			execute = "if NilsReactionCore.Helpers.Tanks.AmIMainTankByContentID(1644) == false then \n  if NilsReactionCore.Actions.Role.Tank.Rampart() then self.used = true end\nend",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -161,14 +161,14 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "NilsReactionCore.Actions.Role.Tank.Reprisal()\nself.used = true",
+			execute = "if NilsReactionCore.Helpers.Tanks.AmIMainTankByContentID(1644) == false then\n  if NilsReactionCore.Actions.Role.Tank.Reprisal() then self.used = true end\nend",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
 			mechanicTime = 9,
-			name = "Reprisal",
+			name = "Reprisal (MT)",
 			randomOffset = 0,
 			randomTimeout = 3,
 			throttleTime = 0,
@@ -191,7 +191,7 @@ local tbl =
 			{
 			},
 			enabled = false,
-			execute = "if NilsReactionCore.Helpers.Tanks.AmIMainTankByContentID(1644) == false then NilsReactionCore.Actions.Role.Tank.Basic() end\nself.used = true",
+			execute = "if NilsReactionCore.Helpers.Tanks.AmIMainTankByContentID(1644) == false then \n  if NilsReactionCore.Actions.Role.Tank.Basic() then self.used = true end\nend",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -254,7 +254,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if NilsReactionCore.Helpers.Tanks.AmIMainTankByContentID(1644) == true then \n  NilsReactionCore.Actions.GunBreaker.Camouflage()\n  NilsReactionCore.Actions.Darkknight.DarkMind()\n  NilsReactionCore.Actions.Warrior.RawIntuition()\n  d(\"********************\")\n  d(\"********************\")\nend\nself.used = true",
+			execute = "if NilsReactionCore.Helpers.Tanks.AmIMainTankByContentID(1644) == true then \n  local wasUsed = false\n  if NilsReactionCore.Actions.GunBreaker.Camouflage() then wasUsed = true\n  elseif NilsReactionCore.Actions.Darkknight.DarkMind() then wasUsed = true\n  elseif NilsReactionCore.Actions.Warrior.RawIntuition() then wasUsed = true end\n  if wasUsed then self.used = true end\nend",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -269,7 +269,7 @@ local tbl =
 			timeRandomRange = false,
 			timeRange = true,
 			timelineIndex = 3,
-			timerEndOffset = 10,
+			timerEndOffset = 5,
 			timerOffset = 0,
 			timerStartOffset = 0.5,
 			used = false,
@@ -946,7 +946,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "-- NilsReactionCore.Actions.Response.Raidwide()\n\nNilsReactionCore.Actions.Role.Tank.Reprisal()\nNilsReactionCore.Actions.Role.Tank.PartyMitigation()\n\nself.used = true",
+			execute = "-- NilsReactionCore.Actions.Response.Raidwide()\n\n--NilsReactionCore.Actions.Role.Tank.Reprisal()\nNilsReactionCore.Actions.Role.Tank.PartyMitigation()\n\nself.used = true",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -1340,7 +1340,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "NilsReactionCore.Hotbar.GunBreaker.Aurora()\nself.used = true",
+			execute = "if NilsReactionCore.Hotbar.GunBreaker.Aurora() then self.used = true end",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -1819,6 +1819,36 @@ local tbl =
 			timerStartOffset = -2,
 			used = false,
 			uuid = "d0f97056-ad57-4382-8736-9933cc29793c",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Toggles.Role.Tank.TankStance(NilsReactionCore.params.off, NilsReactionCore.params.off, NilsReactionCore.params.on, 15000)\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 301,
+			name = "Stance (ST Takes first TB)",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 301,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 37,
+			timerEndOffset = 2,
+			timerOffset = 0,
+			timerStartOffset = -1,
+			used = false,
+			uuid = "c946ed6e-cd57-dd8e-855c-cc41603588f2",
 		},
 	},
 	[38] = 
