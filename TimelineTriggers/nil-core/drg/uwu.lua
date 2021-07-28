@@ -41,7 +41,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if NilsReactionCore.Toggles.Dragoon.FireDive(NilsReactionCore.params.off, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			execute = "if NilsReactionCore.Toggles.Dragoon.DragonFireDive(NilsReactionCore.params.off, NilsReactionCore.params.isNotTimeline) then self.used = true end",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -70,8 +70,8 @@ local tbl =
 			conditions = 
 			{
 			},
-			enabled = false,
-			execute = "NilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.off, NilsReactionCore.params.off, NilsReactionCore.params.on, 2000)\nself.used = true",
+			enabled = true,
+			execute = "NilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.off, NilsReactionCore.params.on, 2000)\nself.used = true",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -326,7 +326,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if NilsReactionCore.Toggles.Dragoon.FireDive(NilsReactionCore.params.on, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			execute = "if NilsReactionCore.Toggles.Dragoon.DragonFireDive(NilsReactionCore.params.on, NilsReactionCore.params.isNotTimeline) then self.used = true end",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -558,7 +558,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if NilsReactionCore.Toggles.Dragoon.FireDive(NilsReactionCore.params.off, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			execute = "if NilsReactionCore.Toggles.Dragoon.DragonFireDive(NilsReactionCore.params.off, NilsReactionCore.params.isNotTimeline) then self.used = true end",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -1422,6 +1422,36 @@ local tbl =
 			used = false,
 			uuid = "8a033212-4259-4eb6-a5a6-1a5c54ffae8c",
 		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Logic.Toggles.CDOn(NilsReactionCore.params.isTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 300,
+			name = "CD on ",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 300,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 36,
+			timerEndOffset = 2,
+			timerOffset = 0,
+			timerStartOffset = -1,
+			used = false,
+			uuid = "290a3917-90db-f2c7-b034-4d0eb264121b",
+		},
 	},
 	[37] = 
 	{
@@ -1699,7 +1729,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if NilsReactionCore.Toggles.Dragoon.DragonSight(NilsReactionCore.params.off, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			execute = "if NilsReactionCore.Toggles.Dragoon.DragonFireDive(NilsReactionCore.params.off, NilsReactionCore.params.isNotTimeline) then self.used = true end",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -1762,7 +1792,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if NilsReactionCore.Toggles.Dragoon.FireDive(NilsReactionCore.params.on, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			execute = "if NilsReactionCore.Toggles.Dragoon.DragonFireDive(NilsReactionCore.params.on, NilsReactionCore.params.isNotTimeline) then self.used = true end",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -1789,6 +1819,36 @@ local tbl =
 	},
 	[47] = 
 	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.isTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 345,
+			name = "CD off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 345,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 47,
+			timerEndOffset = 3,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "4e3c1144-7202-9a24-a74f-4d1b24738a2a",
+		},
 	},
 	[49] = 
 	{
@@ -1943,36 +2003,6 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if NilsReactionCore.Logic.Toggles.JumpsOn(NilsReactionCore.params.isTimeline) then self.used = true end",
-			executeType = 2,
-			lastUse = 0,
-			loop = false,
-			luaNeedsWeaveWindow = false,
-			luaReturnsAction = false,
-			mechanicTime = 365.5,
-			name = "Jump on",
-			randomOffset = 0,
-			randomTimeout = 3,
-			throttleTime = 0,
-			time = 365.5,
-			timeRandomRange = false,
-			timeRange = true,
-			timelineIndex = 51,
-			timerEndOffset = 2,
-			timerOffset = 0,
-			timerStartOffset = 0,
-			used = false,
-			uuid = "4cf5c148-893e-3e7a-a77f-1709ed6d1729",
-		},
-		
-		{
-			actions = 
-			{
-			},
-			conditions = 
-			{
-			},
-			enabled = true,
 			execute = "if NilsReactionCore.Toggles.Dragoon.BattleLitany(NilsReactionCore.params.on, NilsReactionCore.params.isNotTimeline) then self.used = true end",
 			executeType = 2,
 			lastUse = 0,
@@ -1988,11 +2018,71 @@ local tbl =
 			timeRandomRange = false,
 			timeRange = true,
 			timelineIndex = 51,
-			timerEndOffset = 1,
+			timerEndOffset = 1.5,
 			timerOffset = 0,
-			timerStartOffset = -1,
+			timerStartOffset = -0.5,
 			used = false,
 			uuid = "b1a32dfb-861b-abad-bd1f-e4eb42d118d2",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Logic.Toggles.CDOn(NilsReactionCore.params.isTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 365.5,
+			name = "CD on ",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 365.5,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 51,
+			timerEndOffset = 3,
+			timerOffset = 0,
+			timerStartOffset = 1,
+			used = false,
+			uuid = "d26a6e4a-184c-aae1-a5da-94c2d2060615",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Logic.Toggles.JumpsOn(NilsReactionCore.params.isTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 365.5,
+			name = "Jump on",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 365.5,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 51,
+			timerEndOffset = 3,
+			timerOffset = 0,
+			timerStartOffset = 1,
+			used = false,
+			uuid = "4cf5c148-893e-3e7a-a77f-1709ed6d1729",
 		},
 	},
 	[52] = 
@@ -2031,6 +2121,9 @@ local tbl =
 			uuid = "7fdc5798-62f7-bccc-a4df-53d5ab090181",
 		},
 	},
+	[57] = 
+	{
+	},
 	[62] = 
 	{
 	},
@@ -2065,6 +2158,36 @@ local tbl =
 			timerStartOffset = -1,
 			used = false,
 			uuid = "6def57ba-1cbf-6ce6-9b4a-043ec42755a8",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.isTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 409,
+			name = "CD off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 409,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 63,
+			timerEndOffset = 3,
+			timerOffset = 0,
+			timerStartOffset = -1,
+			used = false,
+			uuid = "889ecb96-059d-3f49-beee-09c171b53426",
 		},
 	},
 	[65] = 
@@ -2289,6 +2412,36 @@ local tbl =
 			{
 			},
 			enabled = true,
+			execute = "if NilsReactionCore.Logic.Toggles.CDOn(NilsReactionCore.params.isTimeline) == true then\n  self.used = true\nend",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 605,
+			name = "CD On",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 605,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 75,
+			timerEndOffset = 4,
+			timerOffset = 0,
+			timerStartOffset = -5,
+			used = false,
+			uuid = "e16b581a-16d2-9ed6-984e-bcc0f40433fe",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
 			execute = "NilsReactionCore.Logic.Toggles.AOEOn(NilsReactionCore.params.isTimeline)\nself.used = true",
 			executeType = 2,
 			lastUse = 0,
@@ -2304,7 +2457,7 @@ local tbl =
 			timeRandomRange = false,
 			timeRange = true,
 			timelineIndex = 75,
-			timerEndOffset = 2,
+			timerEndOffset = 0,
 			timerOffset = 0,
 			timerStartOffset = -5,
 			used = false,
@@ -2443,41 +2596,11 @@ local tbl =
 			timeRandomRange = false,
 			timeRange = true,
 			timelineIndex = 75,
-			timerEndOffset = 3,
+			timerEndOffset = 2,
 			timerOffset = 1.375,
 			timerStartOffset = -5,
 			used = false,
 			uuid = "0272a9a7-a323-c0ab-a2ff-3ad2760a109c",
-		},
-		
-		{
-			actions = 
-			{
-			},
-			conditions = 
-			{
-			},
-			enabled = true,
-			execute = "if NilsReactionCore.Logic.Toggles.CDOn(NilsReactionCore.params.isTimeline) == true then\n  self.used = true\nend",
-			executeType = 2,
-			lastUse = 0,
-			loop = false,
-			luaNeedsWeaveWindow = false,
-			luaReturnsAction = false,
-			mechanicTime = 605,
-			name = "CD On",
-			randomOffset = 0,
-			randomTimeout = 3,
-			throttleTime = 0,
-			time = 605,
-			timeRandomRange = false,
-			timeRange = true,
-			timelineIndex = 75,
-			timerEndOffset = 4,
-			timerOffset = 0,
-			timerStartOffset = -5,
-			used = false,
-			uuid = "e16b581a-16d2-9ed6-984e-bcc0f40433fe",
 		},
 		
 		{
@@ -2503,7 +2626,7 @@ local tbl =
 			timeRandomRange = false,
 			timeRange = true,
 			timelineIndex = 75,
-			timerEndOffset = 4,
+			timerEndOffset = 0,
 			timerOffset = 0,
 			timerStartOffset = -5,
 			used = false,
@@ -2545,36 +2668,6 @@ local tbl =
 	},
 	[77] = 
 	{
-		
-		{
-			actions = 
-			{
-			},
-			conditions = 
-			{
-			},
-			enabled = true,
-			execute = "if NilsReactionCore.Hotbar.Feint() == true then self.used = true end",
-			executeType = 2,
-			lastUse = 0,
-			loop = false,
-			luaNeedsWeaveWindow = false,
-			luaReturnsAction = false,
-			mechanicTime = 616,
-			name = "Feint",
-			randomOffset = 0,
-			randomTimeout = 3,
-			throttleTime = 500,
-			time = 616,
-			timeRandomRange = false,
-			timeRange = true,
-			timelineIndex = 77,
-			timerEndOffset = 0,
-			timerOffset = -4,
-			timerStartOffset = -4,
-			used = false,
-			uuid = "31fd1d26-c896-2a92-8a1b-7d136bb06d7f",
-		},
 		
 		{
 			actions = 
@@ -3377,7 +3470,7 @@ local tbl =
 			timelineIndex = 94,
 			timerEndOffset = 5,
 			timerOffset = 1.375,
-			timerStartOffset = -2,
+			timerStartOffset = 0,
 			used = false,
 			uuid = "36a800c4-eaa0-5634-863a-060fe94b8d67",
 		},
@@ -3701,36 +3794,6 @@ local tbl =
 	},
 	[100] = 
 	{
-		
-		{
-			actions = 
-			{
-			},
-			conditions = 
-			{
-			},
-			enabled = true,
-			execute = "if NilsReactionCore.Hotbar.Feint() == true then self.used = true end",
-			executeType = 2,
-			lastUse = 0,
-			loop = false,
-			luaNeedsWeaveWindow = false,
-			luaReturnsAction = false,
-			mechanicTime = 715,
-			name = "Feint",
-			randomOffset = 0,
-			randomTimeout = 3,
-			throttleTime = 500,
-			time = 715,
-			timeRandomRange = false,
-			timeRange = true,
-			timelineIndex = 100,
-			timerEndOffset = 0,
-			timerOffset = -4,
-			timerStartOffset = -4,
-			used = false,
-			uuid = "2124b170-3908-dba0-a510-a64d500121cf",
-		},
 	},
 	[101] = 
 	{
@@ -3800,36 +3863,6 @@ local tbl =
 	},
 	[108] = 
 	{
-		
-		{
-			actions = 
-			{
-			},
-			conditions = 
-			{
-			},
-			enabled = true,
-			execute = "if NilsReactionCore.Hotbar.Feint() == true then self.used = true end",
-			executeType = 2,
-			lastUse = 0,
-			loop = false,
-			luaNeedsWeaveWindow = false,
-			luaReturnsAction = false,
-			mechanicTime = 739,
-			name = "Feint",
-			randomOffset = 0,
-			randomTimeout = 3,
-			throttleTime = 500,
-			time = 739,
-			timeRandomRange = false,
-			timeRange = true,
-			timelineIndex = 108,
-			timerEndOffset = 0,
-			timerOffset = -4,
-			timerStartOffset = -4,
-			used = false,
-			uuid = "9b5f6865-f423-58e9-969a-c74712bda6e7",
-		},
 	},
 	[112] = 
 	{
@@ -3866,6 +3899,320 @@ local tbl =
 	},
 	[113] = 
 	{
+	},
+	[114] = 
+	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.isTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 800,
+			name = "CD off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 800,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 114,
+			timerEndOffset = 2,
+			timerOffset = 0,
+			timerStartOffset = -1,
+			used = false,
+			uuid = "a01bb2da-9d8c-bdfe-8fef-ffff9352a926",
+		},
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 3,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = true,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Enemy",
+					untarget = false,
+					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
+					usePot = false,
+					used = false,
+					variableIsHover = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterOriginalTarget = false,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "if not Player:GetTarget() then return true end\nreturn false",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 800,
+			name = "target boss",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 800,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 114,
+			timerEndOffset = 8,
+			timerOffset = 1.375,
+			timerStartOffset = -4,
+			used = false,
+			uuid = "6ab73012-ab86-11e2-bb30-3ed6a373ffb2",
+		},
+	},
+	[116] = 
+	{
+		
+		{
+			actions = 
+			{
+				
+				{
+					aType = 3,
+					actionID = -1,
+					actionLua = "",
+					allowInterrupt = false,
+					atomicPriority = false,
+					castAtMouse = false,
+					castPosX = 0,
+					castPosY = 0,
+					castPosZ = 0,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterRadius = 8,
+					clusterRange = 30,
+					conditions = 
+					{
+						1,
+					},
+					endIfUsed = false,
+					gVar = "",
+					gVarIndex = 1,
+					gVarValue = 1,
+					ignoreWeaveRules = false,
+					isAreaTarget = false,
+					luaNeedsWeaveWindow = false,
+					luaReturnsAction = false,
+					name = "",
+					potType = 1,
+					setTarget = true,
+					showPositionPreview = false,
+					stopCasting = false,
+					stopMoving = false,
+					targetContentID = -1,
+					targetName = "",
+					targetSubType = "Nearest",
+					targetType = "Enemy",
+					untarget = false,
+					useForWeaving = false,
+					useItem = false,
+					useItemID = 0,
+					useItemName = "",
+					usePot = false,
+					used = false,
+					variableIsHover = false,
+					variableTogglesType = 1,
+				},
+			},
+			conditions = 
+			{
+				
+				{
+					actionCDValue = 0,
+					actionID = -1,
+					buffCheckType = 1,
+					buffDuration = 0,
+					buffID = -1,
+					buffIDList = 
+					{
+					},
+					category = 4,
+					channelCheckSpellID = -1,
+					channelCheckSpellIDList = 
+					{
+					},
+					channelCheckTimeRemain = 0,
+					channelCheckType = 1,
+					clusterMinPercent = false,
+					clusterMinTarget = 1,
+					clusterOriginalTarget = false,
+					clusterRadius = 8,
+					clusterRange = 30,
+					comparator = 1,
+					conditionLua = "if not Player:GetTarget() then return true end\nreturn false",
+					conditionType = 1,
+					conditions = 
+					{
+					},
+					contentid = -1,
+					dequeueIfLuaFalse = false,
+					enmityValue = 0,
+					filterTargetSubtype = "Nearest",
+					filterTargetType = "Self",
+					gaugeIndex = 1,
+					gaugeValue = 0,
+					hpType = 1,
+					hpValue = 0,
+					inCombatType = 1,
+					inRangeValue = 0,
+					lastSkillID = -1,
+					localmapid = -1,
+					matchAnyBuff = false,
+					minTargetPercent = false,
+					mpType = 1,
+					mpValue = 0,
+					name = "",
+					partyHpType = 1,
+					partyHpValue = 0,
+					partyMpType = 1,
+					partyMpValue = 0,
+					partyTargetContentID = -1,
+					partyTargetName = "",
+					partyTargetNumber = 1,
+					partyTargetSubType = 1,
+					partyTargetType = "All",
+					rangeCheckSourceSubType = "Nearest",
+					rangeCheckSourceType = "Self",
+					rangeSourceContentID = -1,
+					rangeSourceName = "",
+					setEventTargetSubtype = 1,
+					setFirstMatch = false,
+				},
+			},
+			enabled = true,
+			execute = "",
+			executeType = 1,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 840,
+			name = "target boss",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 840,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 116,
+			timerEndOffset = 8,
+			timerOffset = 1.375,
+			timerStartOffset = -4,
+			used = false,
+			uuid = "a452c1de-c687-96d3-9372-b6e335fb89a0",
+		},
 	},
 	[118] = 
 	{
@@ -4032,7 +4379,7 @@ local tbl =
 			timeRandomRange = false,
 			timeRange = true,
 			timelineIndex = 118,
-			timerEndOffset = 2,
+			timerEndOffset = 4,
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
@@ -4068,6 +4415,132 @@ local tbl =
 			used = false,
 			uuid = "300ff7d2-c8e3-e52a-9625-119508db5180",
 		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Toggles.Dragoon.BattleLitany(NilsReactionCore.params.on, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 1000,
+			name = "BattleLitany on",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 1000,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 118,
+			timerEndOffset = 4,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "e86e5320-7027-8cb7-9c56-1383d79c6a00",
+		},
+	},
+	[123] = 
+	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.isTimeline)\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 1023,
+			name = "CD Off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 1023,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 123,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = -4,
+			used = false,
+			uuid = "c9058817-f453-7841-936d-2794e9970bba",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Toggles.Dragoon.DragonSight(NilsReactionCore.params.off, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 1023,
+			name = "DragonSight off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 1023,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 123,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = -4,
+			used = false,
+			uuid = "2f88f4ab-134e-2270-841c-6dd0b9744d36",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Toggles.Dragoon.BattleLitany(NilsReactionCore.params.off, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 1023,
+			name = "BattleLitany off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 1023,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 123,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = -4,
+			used = false,
+			uuid = "16ad2ca1-5b2d-2cd0-9682-5e85a9d7a0c5",
+		},
+	},
+	[124] = 
+	{
 	},
 	[133] = 
 	{
@@ -4209,6 +4682,96 @@ local tbl =
 			timerStartOffset = -3,
 			used = false,
 			uuid = "c6bd790b-0e8f-9964-81c9-1b54328972ac",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Logic.Toggles.CDOn(NilsReactionCore.params.isTimeline)\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 1048,
+			name = "CD On",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 1048,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 133,
+			timerEndOffset = 4,
+			timerOffset = 0,
+			timerStartOffset = -1,
+			used = false,
+			uuid = "654c72ff-de30-ec4b-a05c-a7291a6dc4d8",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Toggles.Dragoon.DragonSight(NilsReactionCore.params.on, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 1048,
+			name = "DragonSight on",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 1048,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 133,
+			timerEndOffset = 4,
+			timerOffset = 0,
+			timerStartOffset = -1,
+			used = false,
+			uuid = "d2aa4d57-dd09-0de8-b64b-0b7476581434",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Toggles.Dragoon.BattleLitany(NilsReactionCore.params.on, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 1048,
+			name = "BattleLitany on",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 1048,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 133,
+			timerEndOffset = 4,
+			timerOffset = 0,
+			timerStartOffset = -1,
+			used = false,
+			uuid = "a6d0a981-d889-1e86-baf6-ea879975edb1",
 		},
 	},
 	[150] = 
