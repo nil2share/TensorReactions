@@ -161,7 +161,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "if NilsReactionCore.Helpers.Tanks.AmIMainTankByContentID(1644) == false then\n  if NilsReactionCore.Actions.Role.Tank.Reprisal() then self.used = true end\nend",
+			execute = "if NilsReactionCore.Helpers.Tanks.AmIMainTankByContentID(1644) == true then\n  if NilsReactionCore.Actions.Role.Tank.Reprisal() then self.used = true end\nend",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -223,7 +223,7 @@ local tbl =
 			conditions = 
 			{
 			},
-			enabled = true,
+			enabled = false,
 			execute = "NilsReactionCore.Hotbar.GunBreaker.NoMercy()\nself.used = true",
 			executeType = 2,
 			lastUse = 0,
@@ -269,9 +269,9 @@ local tbl =
 			timeRandomRange = false,
 			timeRange = true,
 			timelineIndex = 3,
-			timerEndOffset = 5,
+			timerEndOffset = 6,
 			timerOffset = 0,
-			timerStartOffset = 0.5,
+			timerStartOffset = 1.5,
 			used = false,
 			uuid = "4db85e02-f578-fc0d-8797-d265f01dbec0",
 		},
@@ -424,7 +424,7 @@ local tbl =
 			timelineIndex = 4,
 			timerEndOffset = 9,
 			timerOffset = 0,
-			timerStartOffset = 2,
+			timerStartOffset = 3,
 			used = false,
 			uuid = "61501208-13b8-a056-826e-9e416eb82b92",
 		},
@@ -517,7 +517,7 @@ local tbl =
 			timelineIndex = 5,
 			timerEndOffset = 2,
 			timerOffset = 0,
-			timerStartOffset = -2.5,
+			timerStartOffset = -0.5,
 			used = false,
 			uuid = "1f800dd3-1817-11d3-811c-37106c8a27ad",
 		},
@@ -916,6 +916,36 @@ local tbl =
 			{
 			},
 			enabled = true,
+			execute = "-- NilsReactionCore.Actions.Response.Raidwide()\n\n--NilsReactionCore.Actions.Role.Tank.Reprisal()\nNilsReactionCore.Actions.Role.Tank.PartyMitigation()\n\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 51,
+			name = "Raid Wide",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 51,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 12,
+			timerEndOffset = 4,
+			timerOffset = 0,
+			timerStartOffset = -3.5,
+			used = false,
+			uuid = "36b6c702-1fe8-1d29-add1-272bad12ea5a",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
 			execute = "NilsReactionCore.Actions.Role.Tank.Basic()\nself.used = true",
 			executeType = 2,
 			lastUse = 0,
@@ -936,36 +966,6 @@ local tbl =
 			timerStartOffset = -2,
 			used = false,
 			uuid = "3f6d52c0-7aa8-6507-8971-bf731838db8e",
-		},
-		
-		{
-			actions = 
-			{
-			},
-			conditions = 
-			{
-			},
-			enabled = true,
-			execute = "-- NilsReactionCore.Actions.Response.Raidwide()\n\n--NilsReactionCore.Actions.Role.Tank.Reprisal()\nNilsReactionCore.Actions.Role.Tank.PartyMitigation()\n\nself.used = true",
-			executeType = 2,
-			lastUse = 0,
-			loop = false,
-			luaNeedsWeaveWindow = false,
-			luaReturnsAction = false,
-			mechanicTime = 51,
-			name = "Raid Wide",
-			randomOffset = 0,
-			randomTimeout = 3,
-			throttleTime = 0,
-			time = 51,
-			timeRandomRange = false,
-			timeRange = true,
-			timelineIndex = 12,
-			timerEndOffset = 4,
-			timerOffset = 0,
-			timerStartOffset = -2.5,
-			used = false,
-			uuid = "36b6c702-1fe8-1d29-add1-272bad12ea5a",
 		},
 	},
 	[13] = 
@@ -1297,39 +1297,9 @@ local tbl =
 			timelineIndex = 18,
 			timerEndOffset = 5,
 			timerOffset = 0,
-			timerStartOffset = -0.5,
+			timerStartOffset = 1.5,
 			used = false,
 			uuid = "8ab5254a-b2dd-a6be-b19c-47ea343d4b07",
-		},
-		
-		{
-			actions = 
-			{
-			},
-			conditions = 
-			{
-			},
-			enabled = true,
-			execute = "NilsReactionCore.Toggles.GunBreaker.NoMercy(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline)\n\nNilsReactionCore.Toggles.Darkknight.SaltedEarth(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline)\nNilsReactionCore.Toggles.Darkknight.Delirium(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline) \nNilsReactionCore.Toggles.Darkknight.BloodWeapon(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline)\n\nNilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.isTimeline)\n\nself.used = true",
-			executeType = 2,
-			lastUse = 0,
-			loop = false,
-			luaNeedsWeaveWindow = false,
-			luaReturnsAction = false,
-			mechanicTime = 93,
-			name = "Turn off Burst Windows",
-			randomOffset = 0,
-			randomTimeout = 3,
-			throttleTime = 0,
-			time = 93,
-			timeRandomRange = false,
-			timeRange = true,
-			timelineIndex = 18,
-			timerEndOffset = 0,
-			timerOffset = 0,
-			timerStartOffset = -4,
-			used = false,
-			uuid = "a54eb350-2473-f171-aee7-6120044b8e5a",
 		},
 		
 		{
@@ -1357,9 +1327,39 @@ local tbl =
 			timelineIndex = 18,
 			timerEndOffset = 0,
 			timerOffset = 0,
-			timerStartOffset = -3,
+			timerStartOffset = -2,
 			used = false,
 			uuid = "493aca3c-1b5d-cb72-aea1-ad11af8287b0",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = false,
+			execute = "NilsReactionCore.Toggles.GunBreaker.NoMercy(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline)\n\nNilsReactionCore.Toggles.Darkknight.SaltedEarth(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline)\nNilsReactionCore.Toggles.Darkknight.Delirium(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline) \nNilsReactionCore.Toggles.Darkknight.BloodWeapon(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline)\n\nNilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.isTimeline)\n\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 93,
+			name = "Turn off Burst Windows",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 93,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 18,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = -4,
+			used = false,
+			uuid = "a54eb350-2473-f171-aee7-6120044b8e5a",
 		},
 	},
 	[19] = 
@@ -1555,6 +1555,36 @@ local tbl =
 			timerStartOffset = -1,
 			used = false,
 			uuid = "ae389691-b517-c443-b5e2-c92b534c9e9c",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Toggles.GunBreaker.NoMercy(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline)\n\nNilsReactionCore.Toggles.Darkknight.SaltedEarth(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline)\nNilsReactionCore.Toggles.Darkknight.Delirium(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline) \nNilsReactionCore.Toggles.Darkknight.BloodWeapon(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline)\n\nNilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.isTimeline)\n\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 121,
+			name = "Turn off Burst Windows",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 121,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 24,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = -4,
+			used = false,
+			uuid = "fcfd0669-92bc-d87f-a84b-9f92b3dddecf",
 		},
 	},
 	[25] = 
@@ -2018,7 +2048,7 @@ local tbl =
 			timelineIndex = 38,
 			timerEndOffset = 0,
 			timerOffset = 0,
-			timerStartOffset = -1,
+			timerStartOffset = -4,
 			used = false,
 			uuid = "c05a3563-9bb6-d859-b945-290bc49d8a22",
 		},
