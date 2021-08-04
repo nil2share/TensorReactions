@@ -107,6 +107,7 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
+			mechanicTime = 9,
 			name = "Standard Off",
 			randomOffset = 0,
 			randomTimeout = 3,
@@ -1073,6 +1074,36 @@ local tbl =
 	},
 	[43] = 
 	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.isTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 328,
+			name = "CD off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 328,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 43,
+			timerEndOffset = 3,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "4dc12ead-f3fe-94b7-8416-15056be2ba30",
+		},
 	},
 	[44] = 
 	{
@@ -1262,6 +1293,36 @@ local tbl =
 			timerStartOffset = -2,
 			used = false,
 			uuid = "5eb5fae1-eb98-7c7a-bce5-fcf91f7ca43e",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Logic.Toggles.CDOn(NilsReactionCore.params.isTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 365.5,
+			name = "CD on ",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 365.5,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 51,
+			timerEndOffset = 2,
+			timerOffset = 0,
+			timerStartOffset = -1,
+			used = false,
+			uuid = "30c25599-7ba7-b2ca-846a-c653ff91fd7b",
 		},
 	},
 	[52] = 
@@ -1486,6 +1547,36 @@ local tbl =
 	},
 	[74] = 
 	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.isTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 600,
+			name = "CD off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 600,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 74,
+			timerEndOffset = 3,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "64e7aff7-23ad-12d9-9ff5-4ef06e7ab75d",
+		},
 	},
 	[75] = 
 	{
@@ -2101,6 +2192,36 @@ local tbl =
 			timerStartOffset = -3,
 			used = false,
 			uuid = "312ba957-7057-c03f-994b-36aae43b409c",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Logic.Toggles.CDOn(NilsReactionCore.params.isTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 651,
+			name = "CD on",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 651,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 89,
+			timerEndOffset = 3,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "f29aff34-5115-9b49-98a3-008cb540bb0f",
 		},
 	},
 	[90] = 
