@@ -101,7 +101,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "NilsReactionCore.Hotbar.Toggles.StandardStep(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline)\nself.used = true",
+			execute = "NilsReactionCore.Toggles.Dancer.StandardStep(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline)\nself.used = true",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -200,7 +200,7 @@ local tbl =
 			{
 			},
 			enabled = true,
-			execute = "NilsReactionCore.Hotbar.Toggles.StandardStep(NilsReactionCore.params.on, NilsReactionCore.params.isTimeline)\nself.used = true",
+			execute = "NilsReactionCore.Toggles.Dancer.StandardStep(NilsReactionCore.params.on, NilsReactionCore.params.isTimeline)\nself.used = true",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
@@ -217,7 +217,7 @@ local tbl =
 			timelineIndex = 5,
 			timerEndOffset = 0,
 			timerOffset = 0,
-			timerStartOffset = -2,
+			timerStartOffset = -4,
 			used = false,
 			uuid = "1fce5753-0211-5939-95d1-03774322c85d",
 		},
@@ -365,6 +365,36 @@ local tbl =
 			timerStartOffset = -1.5,
 			used = false,
 			uuid = "4ad1b8c4-6f0b-6a89-b7e1-766f0d33c177",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.isTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 34,
+			name = "CD off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 34,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 8,
+			timerEndOffset = 3,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "c93a7ee0-943f-8b64-b8da-2912f9a628bb",
 		},
 	},
 	[9] = 
@@ -550,6 +580,36 @@ local tbl =
 	},
 	[13] = 
 	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Actions.Response.Raidwide()\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 57,
+			name = "Raid Wide",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 57,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 13,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = -2,
+			used = false,
+			uuid = "0c18eeb8-2e99-77cd-b3c4-ff33b8270672",
+		},
 	},
 	[15] = 
 	{
@@ -1074,36 +1134,6 @@ local tbl =
 	},
 	[43] = 
 	{
-		
-		{
-			actions = 
-			{
-			},
-			conditions = 
-			{
-			},
-			enabled = true,
-			execute = "if NilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.isTimeline) then self.used = true end",
-			executeType = 2,
-			lastUse = 0,
-			loop = false,
-			luaNeedsWeaveWindow = false,
-			luaReturnsAction = false,
-			mechanicTime = 328,
-			name = "CD off",
-			randomOffset = 0,
-			randomTimeout = 3,
-			throttleTime = 0,
-			time = 328,
-			timeRandomRange = false,
-			timeRange = true,
-			timelineIndex = 43,
-			timerEndOffset = 3,
-			timerOffset = 0,
-			timerStartOffset = 0,
-			used = false,
-			uuid = "4dc12ead-f3fe-94b7-8416-15056be2ba30",
-		},
 	},
 	[44] = 
 	{
@@ -1149,9 +1179,72 @@ local tbl =
 	},
 	[48] = 
 	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Toggles.Dancer.StandardStep(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline)\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 351,
+			name = "Standard Off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 351,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 48,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = -6,
+			used = false,
+			uuid = "3a84bab9-9961-bc9c-95c5-63527b8e6bcb",
+		},
 	},
 	[49] = 
 	{
+	},
+	[50] = 
+	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.isTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 361.5,
+			name = "CD on",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 361.5,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 50,
+			timerEndOffset = 2,
+			timerOffset = 0,
+			timerStartOffset = -3,
+			used = false,
+			uuid = "7aa737b1-db3a-dda8-9c19-30d5511bcdce",
+		},
 	},
 	[51] = 
 	{
@@ -1294,36 +1387,6 @@ local tbl =
 			used = false,
 			uuid = "5eb5fae1-eb98-7c7a-bce5-fcf91f7ca43e",
 		},
-		
-		{
-			actions = 
-			{
-			},
-			conditions = 
-			{
-			},
-			enabled = true,
-			execute = "if NilsReactionCore.Logic.Toggles.CDOn(NilsReactionCore.params.isTimeline) then self.used = true end",
-			executeType = 2,
-			lastUse = 0,
-			loop = false,
-			luaNeedsWeaveWindow = false,
-			luaReturnsAction = false,
-			mechanicTime = 365.5,
-			name = "CD on ",
-			randomOffset = 0,
-			randomTimeout = 3,
-			throttleTime = 0,
-			time = 365.5,
-			timeRandomRange = false,
-			timeRange = true,
-			timelineIndex = 51,
-			timerEndOffset = 2,
-			timerOffset = 0,
-			timerStartOffset = -1,
-			used = false,
-			uuid = "30c25599-7ba7-b2ca-846a-c653ff91fd7b",
-		},
 	},
 	[52] = 
 	{
@@ -1351,11 +1414,74 @@ local tbl =
 			timeRandomRange = false,
 			timeRange = true,
 			timelineIndex = 52,
-			timerEndOffset = 0,
+			timerEndOffset = 2,
 			timerOffset = 0,
-			timerStartOffset = -3,
+			timerStartOffset = -2,
 			used = false,
 			uuid = "5e9ae055-da58-7e24-bde1-c26317be67ba",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Toggles.Dancer.StandardStep(NilsReactionCore.params.on, NilsReactionCore.params.isTimeline)\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 369,
+			name = "Standard On",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 369,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 52,
+			timerEndOffset = 2,
+			timerOffset = 0,
+			timerStartOffset = -2,
+			used = false,
+			uuid = "c960ae6b-57c8-f090-ab63-82fc4931fc73",
+		},
+	},
+	[55] = 
+	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.isTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 383,
+			name = "CD off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 383,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 55,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = -2,
+			used = false,
+			uuid = "6880e07b-356d-eee5-bf41-67ee26e382ff",
 		},
 	},
 	[57] = 
@@ -1571,7 +1697,7 @@ local tbl =
 			timeRandomRange = false,
 			timeRange = true,
 			timelineIndex = 74,
-			timerEndOffset = 3,
+			timerEndOffset = 5,
 			timerOffset = 0,
 			timerStartOffset = 0,
 			used = false,
@@ -1831,6 +1957,36 @@ local tbl =
 			used = false,
 			uuid = "9c9aa579-90a6-978c-b189-53b2dbaa085a",
 		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Toggles.Dancer.StandardStep(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline)\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 616,
+			name = "Standard Off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 616,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 77,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = -5,
+			used = false,
+			uuid = "b8f5b98e-cc9e-fd75-9b24-74ca48b6e7d3",
+		},
 	},
 	[78] = 
 	{
@@ -1975,6 +2131,36 @@ local tbl =
 			timerStartOffset = -2,
 			used = false,
 			uuid = "45d0005e-f84b-b363-9aa8-339a35b0f0f4",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = false,
+			execute = "NilsReactionCore.Toggles.Dancer.StandardStep(NilsReactionCore.params.on, NilsReactionCore.params.isTimeline)\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 623.5,
+			name = "Standard On",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 623.5,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 79,
+			timerEndOffset = 3,
+			timerOffset = 0,
+			timerStartOffset = -3,
+			used = false,
+			uuid = "71bd4521-7ba6-c6b5-aefd-f05a74000483",
 		},
 	},
 	[80] = 
@@ -2132,7 +2318,7 @@ local tbl =
 			conditions = 
 			{
 			},
-			enabled = true,
+			enabled = false,
 			execute = "local duration = 6000\nlocal width = 1\nlocal length\nlocal t = TensorCore.getEntityByGroup(\"ContentID\", {contentid = 1801, subgroup = \"Nearest\"})\nif t and Argus then\nlength = (24 + t.Distance) \nArgus.addTimedRectFilled(duration, t.pos.x, t.pos.y, t.pos.z, length, width, t.pos.h, {r = 0, g = 0.7, b = 0.5}, 0.15, 0.15, 0, t.id, Player.id, true, GUI:ColorConvertFloat4ToU32(0, 0.5, 0.5, 1), 2.5)\nend\nself.used = true",
 			executeType = 2,
 			lastUse = 0,
@@ -2153,6 +2339,36 @@ local tbl =
 			timerStartOffset = -5,
 			used = false,
 			uuid = "1d595fda-6ff9-3f5d-8f78-4432388bcdb4",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = false,
+			execute = "NilsReactionCore.Toggles.Dancer.StandardStep(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline)\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 637,
+			name = "Standard Off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 637,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 84,
+			timerEndOffset = 5,
+			timerOffset = 0,
+			timerStartOffset = 0,
+			used = false,
+			uuid = "6508c716-fffd-daba-ad11-79747f0f33e2",
 		},
 	},
 	[87] = 
@@ -2219,9 +2435,39 @@ local tbl =
 			timelineIndex = 89,
 			timerEndOffset = 3,
 			timerOffset = 0,
-			timerStartOffset = 0,
+			timerStartOffset = -2,
 			used = false,
 			uuid = "f29aff34-5115-9b49-98a3-008cb540bb0f",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Toggles.Dancer.StandardStep(NilsReactionCore.params.on, NilsReactionCore.params.isTimeline)\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 651,
+			name = "Standard On",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 651,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 89,
+			timerEndOffset = 8,
+			timerOffset = 0,
+			timerStartOffset = 5,
+			used = false,
+			uuid = "3fad79dd-efeb-13f5-90ab-86a47752c386",
 		},
 	},
 	[90] = 
@@ -2819,9 +3065,6 @@ local tbl =
 			used = false,
 			uuid = "81cd40ea-b911-1713-b09b-a2310660c28d",
 		},
-	},
-	[99] = 
-	{
 		
 		{
 			actions = 
@@ -2830,28 +3073,31 @@ local tbl =
 			conditions = 
 			{
 			},
-			enabled = false,
-			execute = "NilsReactionCore.Raid.Mechanics.General.Cleave(1801, 7, 70, 4500)\nself.used = true",
+			enabled = true,
+			execute = "if NilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.isTimeline) then self.used = true end",
 			executeType = 2,
 			lastUse = 0,
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
-			mechanicTime = 711,
-			name = "Draw Cleave",
+			mechanicTime = 704,
+			name = "CD off",
 			randomOffset = 0,
 			randomTimeout = 3,
 			throttleTime = 0,
-			time = 711,
+			time = 704,
 			timeRandomRange = false,
 			timeRange = true,
-			timelineIndex = 99,
-			timerEndOffset = 2,
+			timelineIndex = 98,
+			timerEndOffset = 5,
 			timerOffset = 0,
-			timerStartOffset = -2,
+			timerStartOffset = 0,
 			used = false,
-			uuid = "496d086b-993e-9984-905f-5bf5215b90fa",
+			uuid = "88a588cf-2cf7-d302-81b5-f44ba286664b",
 		},
+	},
+	[99] = 
+	{
 	},
 	[100] = 
 	{
@@ -3196,9 +3442,98 @@ local tbl =
 			used = false,
 			uuid = "51586089-0016-eb5c-a7b6-e608d9c0b0f7",
 		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Toggles.Dancer.StandardStep(NilsReactionCore.params.off, NilsReactionCore.params.isTimeline)\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 840,
+			name = "Standard Off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 840,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 116,
+			timerEndOffset = 8,
+			timerOffset = 0,
+			timerStartOffset = 5,
+			used = false,
+			uuid = "b50876fd-91c8-f82e-82ce-e73369b85424",
+		},
 	},
 	[118] = 
 	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Logic.Toggles.CDOff(NilsReactionCore.params.isTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 1000,
+			name = "CD on",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 1000,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 118,
+			timerEndOffset = 5,
+			timerOffset = 0,
+			timerStartOffset = -13,
+			used = false,
+			uuid = "0c354efe-c21b-731e-8430-08ea4223be92",
+		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Hotbar.Dancer.TechnicalStep() then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			name = "Start Tech",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 1000,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 118,
+			timerEndOffset = 0,
+			timerOffset = -13,
+			timerStartOffset = -13,
+			used = false,
+			uuid = "10f41f3b-8986-9c10-8535-8110d2d254ab",
+		},
 		
 		{
 			actions = 
@@ -3334,7 +3669,7 @@ local tbl =
 			timelineIndex = 118,
 			timerEndOffset = 3,
 			timerOffset = 1.375,
-			timerStartOffset = -2,
+			timerStartOffset = -3,
 			used = false,
 			uuid = "8daeb129-8c85-096f-8109-2eb5abed9eaf",
 		},
@@ -3398,6 +3733,36 @@ local tbl =
 			used = false,
 			uuid = "a1afc451-0e44-1af6-9f37-e903691e4fdb",
 		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "NilsReactionCore.Toggles.Dancer.StandardStep(NilsReactionCore.params.on, NilsReactionCore.params.isTimeline)\nself.used = true",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 1000,
+			name = "Standard On",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 1000,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 118,
+			timerEndOffset = 4,
+			timerOffset = 0,
+			timerStartOffset = -2,
+			used = false,
+			uuid = "a2d8ca57-5a2f-bc22-8a0f-c5268633723d",
+		},
 	},
 	[119] = 
 	{
@@ -3416,6 +3781,36 @@ local tbl =
 	},
 	[125] = 
 	{
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Hotbar.Dancer.StandardStep() then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 1038,
+			name = "Standard On",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 1038,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 125,
+			timerEndOffset = 2,
+			timerOffset = 0,
+			timerStartOffset = -2,
+			used = false,
+			uuid = "f0019d91-b3b0-285e-8b3b-df68bdd9280c",
+		},
 	},
 	[127] = 
 	{

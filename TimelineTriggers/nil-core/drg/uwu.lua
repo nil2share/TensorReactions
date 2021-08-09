@@ -879,7 +879,7 @@ local tbl =
 			timelineIndex = 14,
 			timerEndOffset = 0,
 			timerOffset = 0,
-			timerStartOffset = -2,
+			timerStartOffset = -8,
 			used = false,
 			uuid = "502fe1ca-9ca6-6949-a6f7-489440f91ec8",
 		},
@@ -2430,6 +2430,36 @@ local tbl =
 			used = false,
 			uuid = "38c106ae-1473-385e-996d-84f791b6a050",
 		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Toggles.Dragoon.DragonSight(NilsReactionCore.params.off, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 600,
+			name = "DragonSight off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 600,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 74,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = -2,
+			used = false,
+			uuid = "9ef11ba4-3f1e-c57a-9d7d-10852e42ca53",
+		},
 	},
 	[75] = 
 	{
@@ -2662,6 +2692,36 @@ local tbl =
 			used = false,
 			uuid = "91ae45f7-5f35-34ab-8a31-8305007ae31c",
 		},
+		
+		{
+			actions = 
+			{
+			},
+			conditions = 
+			{
+			},
+			enabled = true,
+			execute = "if NilsReactionCore.Toggles.Dragoon.DragonSight(NilsReactionCore.params.off, NilsReactionCore.params.isNotTimeline) then self.used = true end",
+			executeType = 2,
+			lastUse = 0,
+			loop = false,
+			luaNeedsWeaveWindow = false,
+			luaReturnsAction = false,
+			mechanicTime = 605,
+			name = "DragonSight off",
+			randomOffset = 0,
+			randomTimeout = 3,
+			throttleTime = 0,
+			time = 605,
+			timeRandomRange = false,
+			timeRange = true,
+			timelineIndex = 75,
+			timerEndOffset = 0,
+			timerOffset = 0,
+			timerStartOffset = -5,
+			used = false,
+			uuid = "63207dc9-5572-2bce-be5d-68c3b8b9481e",
+		},
 	},
 	[76] = 
 	{
@@ -2752,7 +2812,7 @@ local tbl =
 			conditions = 
 			{
 			},
-			enabled = true,
+			enabled = false,
 			execute = "",
 			executeType = 1,
 			lastUse = 0,
@@ -3250,9 +3310,6 @@ local tbl =
 	},
 	[90] = 
 	{
-	},
-	[91] = 
-	{
 		
 		{
 			actions = 
@@ -3268,21 +3325,24 @@ local tbl =
 			loop = false,
 			luaNeedsWeaveWindow = false,
 			luaReturnsAction = false,
-			mechanicTime = 669,
+			mechanicTime = 666,
 			name = "Jump off",
 			randomOffset = 0,
 			randomTimeout = 3,
 			throttleTime = 0,
-			time = 669,
+			time = 666,
 			timeRandomRange = false,
 			timeRange = true,
-			timelineIndex = 91,
-			timerEndOffset = 2,
+			timelineIndex = 90,
+			timerEndOffset = 0,
 			timerOffset = 0,
-			timerStartOffset = -1,
+			timerStartOffset = -3,
 			used = false,
-			uuid = "09c87c38-b386-c011-b880-59eb42ac8c76",
+			uuid = "1a23f769-914e-4b30-bee1-efca4f43735c",
 		},
+	},
+	[91] = 
+	{
 	},
 	[93] = 
 	{
